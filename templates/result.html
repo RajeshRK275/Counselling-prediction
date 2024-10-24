@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Results</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='result.css')}}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Prediction</h1>
+            <div class="logout-button">
+                <a href="/logout"><button>Logout</button></a>
+            </div>
+
+            <div class="result-container">
+                <div class="course-selection">
+                    <div class="form-select">
+                        <form method="POST" action="/result">
+                            <label for="course-selection">SELECT COURSE :</label>
+                            <select name="course" id="course" required>
+                                <option value=""></option>
+                                <option value="it">IT</option>
+                                <option value="ece">ECE</option>
+                                <option value="eee">EEE</option>
+                                <option value="mech">MECH</option>
+                                <option value="civil">CIVIL</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            <input type="number" placeholder="Marks" min="0" max="1200" name="marks" id="marks" required/>
+                            <input type="number" placeholder="Cut OFF" name="cutoff" id="cutoff" step="any" min="0" max="200" required/>
+                            <button>Predict</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="prediction-container">
+                    <label class="suggestion-heading">Suggestions </label>
+                    <div class="suggestion-container">
+
+                        <div class="suggestion-college">
+                            <p>Coimbatore of Institute of Technology</p>
+                            <p>PSG College of Technology</p>
+                            <p>Kumaraguru College of Technology</p>
+                            <p>Government College of Technology</p>
+                        </div>
+                        <div class="suggestion-percentage">
+                            <p>{{result1}}</p>
+                            <p>{{result2}}</p>
+                            <p>{{result3}}</p>
+                            <p>{{result4}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

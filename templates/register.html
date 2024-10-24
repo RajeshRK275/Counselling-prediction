@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Student Admission</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='register.css')}}">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+</head>
+
+
+<body>
+    <div class="container" id="container">
+            <form method="POST" action="/register">
+                <h1>Register</h1>
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="text" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" minlength="8" required/>
+                <a href="{{url_for('login')}}">Already have an account ? Login</a>
+                <button>Sign Up</button>
+            </form>
+    </div>
+
+    <footer>
+        <p>
+            Created by TEAM : Sujan and Rajesh.
+        </p>
+    </footer>
+</body>
+
+</html>

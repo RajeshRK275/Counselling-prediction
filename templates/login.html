@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Student Admission</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+</head>
+
+<body>
+    <div class="container" id="container">
+            <form method="POST" action="/login">
+                <h1>Sign in</h1>
+                <input type="text" name="name" placeholder="Username"  required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <a href="{{url_for('register')}}">New User? Register</a>
+                <button>Sign In</button>
+            </form>
+    </div>
+
+    <footer>
+        <p>
+            Created by TEAM : Sujan and Rajesh.
+        </p>
+    </footer>
+</body>
+
+</html>
